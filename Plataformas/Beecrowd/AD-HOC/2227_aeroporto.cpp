@@ -14,17 +14,10 @@ using namespace std;
 #define pb push_back
 #define all(x) (x).begin(), (x).end()
 
-bool ordena(pair<int,int> a, pair<int,int> b){
-    if(a.first == b.first)
-        return a.second < b.second;
-
-    return a.first > b.first;
-}
-
 int main() {
     fastio;
 
-    int a, v, ind =1;
+    int a, v, ind = 1;
     while (true)
     {
         cin >> a >> v;
@@ -33,40 +26,35 @@ int main() {
 
         if(ind > 1)
             cout << '\n';
-        
-        vector<pair<int,int>> vet(a);
-        for (int i = 0; i < a; i++)
-            vet[i] = {0,i+1};
 
-        int o, d;
+        vector<int> aeroportos(a);
+        int maior = 0;
+
+        int a1, a2;
         for (int i = 0; i < v; i++)
         {
-            cin >> o >> d;
-            vet[o-1].first++;
-            vet[d-1].first++;
+            cin >> a1 >> a2;
+            aeroportos[a1-1]++;
+            aeroportos[a2-1]++;
+
+            if(maior < max(aeroportos[a1-1],aeroportos[a2-1]))
+                maior =max(aeroportos[a1-1],aeroportos[a2-1]);
         }
 
-        sort(vet.begin(), vet.end(), ordena);
 
-        int maior = vet[0].first;
-            
         cout << "Teste " << ind << '\n';
-        cout << vet[0].second;
-        for (int i = 1; i < a; i++)
+        for (int i = 0; i < a; i++)
         {
-            if(vet[i].first < maior)
-                break;
-            else
-                cout << ' ';
-
-            cout << vet[i].second;
+            if(aeroportos[i] == maior){
+                cout << i+1 << ' ';
+            }
         }
-        
+
         cout << '\n';
         ind++;
-        
-        
     }
+
+    cout << '\n';
     
     
 

@@ -28,52 +28,50 @@ int main() {
         int hp;
         cin >> hp;
 
-        hp -= At;
+        bool fa = true;
+        bool fb = true;
+        int aux1 = Ad, aux2 = Bd;
 
-        if(hp <= 0){
-            cout << "Andre\n";
-        }else{
-            hp -= Bt;
+        while (true)
+        {
+            if(fa){
+                hp -= At;
 
-            if(hp <= 0){
-                cout << "Beto\n";
-            }else{
-                int t = 1;
-                while (t++)
-                {
-                    cerr << hp << '\n';
-                    cerr << t%Ad << ' ' << t%Bd << ' ' << t << '\n';
-                            if (t%Ad == 0){
-                                hp -= At;
-
-                                if(hp <= 0){
-                                    cout << "Andre\n";
-                                    break;
-                                }
-
-                                continue;
-                            }
-
-                            if (t%Bd == 0){
-                                hp -= Bt;
-
-                                if(hp <= 0){
-                                    cout << "Beto\n";
-                                    break;
-                                }
-                                continue;
-                            }
-
+                if(hp<=0){
+                    cout << "Andre\n";
+                    break;
                 }
-            }
-        }
-            
-        
-            
 
+                fa = false;
+                aux1 = Ad;
+            }
+
+            if(fb){
+                hp -= Bt;
+
+                if(hp<=0){
+                    cout << "Beto\n";
+                    break;
+                }
+
+                fb = false;
+                aux2 = Bd;
+            }
+
+            if(aux2 < aux1){
+                fb = true;
+                aux1 -= aux2;
+            }else if(aux1 < aux2){
+                fa = true;
+                aux2 -= aux1;
+            }else{
+                fa=true;
+                fb=true;
+            }
+
+        }
         
-        
-        
+       
     }
     
     
