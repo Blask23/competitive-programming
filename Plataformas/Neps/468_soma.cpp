@@ -15,70 +15,25 @@ using namespace std;
 #define all(x) (x).begin(), (x).end()
 
 int main() {
-    fastio;
-
-    int n, k;
-
+    ll n, k, cnt = 0;
     cin >> n >> k;
 
-    vector<int> sum(n);
+    vector<ll> vet(n), pref(n+1);
+    map<ll, ll> pref_cnt;
 
-    cin >> sum[0];
-
-    for (int i = 1; i < n; i++)
+    for (size_t i = 0; i < n; i++)
     {
-        cin >> sum[i];
-        sum[i]+=sum[i-1];
-    }
-
-    int qtd = 0;
-    int aux = 0;
-    for (int i = 0; i < n; i++)
-    {
-        if(sum[i] == k){
-            int j = i;
-            while (j<n && sum[i] + (sum[j]-sum[i]) <= k)
-            {
-                qtd++;
-                j++;
-            }
-        }else if(i>0 && sum[i]-sum[i-1] == k){
-            int j = i;
-            int aux2 = sum[i]-sum[i-1];
-            while (j<n && aux2 + (sum[j]-sum[i]) <= k)
-            {
-                qtd++;
-                j++;
-            }
-        }else if(sum[i]-aux == k){
-            int j = i;
-            int aux2 = sum[i]-aux ;
-            while (j<n && aux2 + (sum[j]-sum[i]) <= k)
-            {
-                qtd++;
-                j++;
-            }
-        }
-
-/*
-        cerr << sum[i]-aux << '\n';
-        if(sum[i]==k){
-            qtd++;
-        }
-        
-        if(i>0 && sum[i]-sum[i-1] == k){
-            qtd++;
-            aux = sum[i];
-        }
-        
-        if(sum[i]-aux == k){
-            qtd++;
-        }
-*/
-
+        cin >> vet[i];
+        pref[i+1] = pref[i] + vet[i];
     }
     
-    cout << qtd << '\n';
+    for (size_t i = 0; i <= n; i++)
+    {
+        cnt += pref_cnt[pref[i] -k];
+        pref_cnt[pref[i]] +=1;
+    }
+    
+    cout << cnt << '\n';
 
     return 0;
 }

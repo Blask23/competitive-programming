@@ -17,6 +17,28 @@ using namespace std;
 int main() {
     fastio;
 
+    ll n;
+    
+    while (true)
+    {
+        cin >> n;
+
+        if(n == 0)
+            break;
+
+        vector<ll> vet(n);
+        cin >> vet[0];
+        ll ans = abs(vet[0]);
+        for (size_t i = 1; i < n; i++)
+        {
+            cin >> vet[i];
+            vet[i] += vet[i-1];
+            ans += abs(vet[i]);
+        }
+        
+        cout << ans << '\n';
+    }
+    
     
 
     return 0;
