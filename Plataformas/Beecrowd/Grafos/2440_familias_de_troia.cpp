@@ -3,7 +3,7 @@
 // Categoria: Grafos (nivel 5)
 // Origem: Por OBI - Olimpíada Brasileira de Informática 2013 Brazil
 // Link: https://judge.beecrowd.com/pt/problems/view/2440
-// Assunto:
+// Assunto: Introdução a grafos
 
 
 #include <bits/stdc++.h>
