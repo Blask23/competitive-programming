@@ -1,8 +1,8 @@
-// Problema:
-// Plataforma:
-// Categoria:
-// Origem:
-// Link:
+// Problema: 1028 - Figurinhas
+// Plataforma: beecrowd
+// Categoria: matematica (nivel 3)
+// Origem: Por Neilor Tonin, URI Brasil
+// Link: https://judge.beecrowd.com/pt/problems/view/1028
 // Assunto:
 
 

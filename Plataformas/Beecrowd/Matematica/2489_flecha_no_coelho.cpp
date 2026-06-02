@@ -1,8 +1,8 @@
-// Problema:
-// Plataforma:
-// Categoria:
-// Origem:
-// Link:
+// Problema: 2489 - Flecha no Coelho
+// Plataforma: beecrowd
+// Categoria: matematica (nivel 2)
+// Origem: Por João Marcos Salvanini Bellini de Moraes, IFSULDEMINAS Brazil
+// Link: https://judge.beecrowd.com/pt/problems/view/2489
 // Assunto:
 
 
