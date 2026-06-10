@@ -1,3 +1,11 @@
+// Problema: 1133C - Balanced Team
+// Plataforma: codeforces
+// Categoria:
+// Origem: Codeforces Round 544 (Div. 3)
+// Link: https://codeforces.com/problemset/problem/1133/C
+// Assunto: two pointers
+
+
 #include <bits/stdc++.h>
 using namespace std;
  

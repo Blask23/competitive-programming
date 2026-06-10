@@ -1,9 +1,9 @@
-// Problema:
-// Plataforma:
-// Categoria:
-// Origem:
-// Link:
-// Assunto:
+// Problema: 60 - Sanduíche
+// Plataforma: Neps Academy
+// Categoria: 
+// Origem: Exercicio adicionado por Thiago Nepomuceno
+// Link: https://neps.academy/br/exercise/60
+// Assunto: two pointers
 
 
 #include <bits/stdc++.h>
