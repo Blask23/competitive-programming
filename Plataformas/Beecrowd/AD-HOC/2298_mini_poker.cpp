@@ -1,8 +1,8 @@
-// Problema:
-// Plataforma:
-// Categoria:
-// Origem:
-// Link:
+// Problema: 2298 - Mini-Poker
+// Plataforma: beecrowd
+// Categoria: ad-hoc (nivel 4)
+// Origem: Por OBI - Olimpíada Brasileira de Informática 2005 Brazil
+// Link: https://judge.beecrowd.com/pt/problems/view/2298
 // Assunto:
 
 #include <bits/stdc++.h>
